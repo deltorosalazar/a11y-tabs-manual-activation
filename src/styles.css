@@ -3,10 +3,27 @@ body {
 }
 
 .tabs {
-  background-color: red;
+  background-color: lightcyan;
   font-family: "lucida grande", sans-serif;
-  width: 20em;
 }
+
+.tabs__timers-wrapper {
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+
+.tabs__timerlist,
+.tabs__tablist {
+  display: grid;
+}
+
+.tabs__timer {
+  background-color: blueviolet;
+  border: 1px solid red;
+  height: 100%;
+  width: 30px;
+}
+
 [role="tab"] {
   position: relative;
   margin: 0;
@@ -18,4 +35,10 @@ body {
   font-family: inherit;
   font-size: inherit;
   background: hsl(220, 20%, 94%);
+}
+
+@media only screen and (min-width: 900px) {
+  .tabs {
+    background-color: blanchedalmond;
+  }
 }
