@@ -7,21 +7,35 @@ body {
   font-family: "lucida grande", sans-serif;
 }
 
-.tabs__timers-wrapper {
-  display: grid;
-  grid-template-columns: 20% 80%;
-}
-
-.tabs__timerlist,
 .tabs__tablist {
   display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
 }
 
 .tabs__timer {
   background-color: blueviolet;
   border: 1px solid red;
+  grid-column: 1;  
+  grid-row: 1;  
   height: 100%;
+  overflow: hidden;
+  position: relative;
   width: 30px;
+}
+
+.tabs__tab {
+  grid-column: 1/-1;
+  grid-row: 2;
+}
+
+.tabs__timer::after {
+  background-color: orangered;
+  content: '';
+  height: 100%;
+  position: absolute;
+  top: -100%;
+  width: 100%;
 }
 
 [role="tab"] {
@@ -37,8 +51,31 @@ body {
   background: hsl(220, 20%, 94%);
 }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 500px) {
   .tabs {
     background-color: blanchedalmond;
+  }
+
+  .tabs__tablist {
+    display: grid;
+    grid-template-columns: 20% 80%;
+  }
+
+  .tabs__timer {
+    background-color: blueviolet;
+    border: 1px solid red;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 30px;
+  }
+  
+  .tabs__timer::after {
+    background-color: orangered;
+    content: '';
+    height: 100%;
+    position: absolute;
+    top: -100%;
+    width: 100%;
   }
 }
