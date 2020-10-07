@@ -1,0 +1,21 @@
+body {
+  font-family: sans-serif;
+}
+
+.tabs {
+  background-color: red;
+  font-family: "lucida grande", sans-serif;
+  width: 20em;
+}
+[role="tab"] {
+  position: relative;
+  margin: 0;
+  padding: 0.3em 0.5em 0.4em;
+  border: 1px solid hsl(219, 1%, 72%);
+  border-radius: 0.2em 0.2em 0 0;
+  box-shadow: 0 0 0.2em hsl(219, 1%, 72%);
+  overflow: visible;
+  font-family: inherit;
+  font-size: inherit;
+  background: hsl(220, 20%, 94%);
+}
